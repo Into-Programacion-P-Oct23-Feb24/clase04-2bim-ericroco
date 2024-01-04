@@ -25,11 +25,8 @@ public class Ejemplo041 {
                 matrizResultado[i][j] = multiplicarValores(primerValor, segundoValor);
             }
         }
-        System.out.println("Matriz 1");
         presentarMatriz(matriz1);
-        System.out.println("Matriz 2");
         presentarMatriz(matriz2);
-        System.out.println("Matriz Resultado");
         presentarMatriz(matrizResultado);
     }
 
