@@ -13,16 +13,40 @@ public class Ejemplo041 {
 
     public static void main(String[] args) {
         // 
-        obtenerMultiplicacion(primerValor, segundoValor); 
-        
+        int[][] matriz1 = {{1, 2, 3}, {3, 2, 4}, {2, 6, 2}};
+        int[][] matriz2 = {{1, 2, 3}, {2, 2, 2}, {3, 1, 2}};
+        int[][] matrizResultado = new int[3][3];
+        int primerValor = 0;
+        int segundoValor = 0;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                primerValor = matriz1[i][j];
+                segundoValor = matriz2[i][j];
+                matrizResultado[i][j] = multiplicarValores(primerValor, segundoValor);
+            }
+        }
+        System.out.println("Matriz 1");
+        presentarMatriz(matriz1);
+        System.out.println("Matriz 2");
+        presentarMatriz(matriz2);
+        System.out.println("Matriz Resultado");
+        presentarMatriz(matrizResultado);
     }
-        
-    public static void obtenerSuma(int a, int b){
-        int suma;
-        suma = a + b;
-        System.out.printf("El valor de la suma es: %d\n", suma);
-        
+
+    public static int multiplicarValores(int a, int b) {
+        int resultadoMultiplicacion;
+        resultadoMultiplicacion = a * b;
+        return resultadoMultiplicacion;
     }
-    
-    
+
+    public static void presentarMatriz(int matriz[][]) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.printf(matriz[i][j] + "\t");
+            }
+            System.out.println("\n");
+        }
+        System.out.println("\n");
+
+    }
 }
